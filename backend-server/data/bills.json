@@ -1,0 +1,85 @@
+[
+  {
+    "id": "bill001",
+    "customer_id": "cust001",
+    "orders": [
+      "ord001"
+    ],
+    "subtotal": 96.95,
+    "tax": 7.76,
+    "total": 104.71,
+    "status": "paid",
+    "payment_method": "card",
+    "created_at": "2025-11-20T21:00:00",
+    "paid_at": "2025-11-20T21:05:00"
+  },
+  {
+    "id": "cc1dd2ee",
+    "customer_id": "fba2e88e",
+    "orders": [
+      "315880ac",
+      "135c73f5",
+      "73b6b51d"
+    ],
+    "subtotal": 45.95,
+    "tax": 3.68,
+    "total": 49.63,
+    "status": "paid",
+    "created_at": "2025-12-01T12:02:57.584271",
+    "payment_method": "UPI",
+    "paid_at": "2025-12-01T12:03:08.833517"
+  },
+  {
+    "id": "974975a2",
+    "customer_id": "fba2e88e",
+    "orders": [
+      "315880ac",
+      "135c73f5",
+      "73b6b51d",
+      "fbbe15fa"
+    ],
+    "subtotal": 61.93,
+    "tax": 4.95,
+    "total": 66.88,
+    "status": "pending",
+    "created_at": "2025-12-01T12:50:19.218321"
+  },
+  {
+    "id": "8bc26c1b",
+    "customer_id": "fba2e88e",
+    "orders": [
+      "315880ac",
+      "135c73f5",
+      "73b6b51d",
+      "fbbe15fa",
+      "7868d63b"
+    ],
+    "subtotal": 77.91,
+    "tax": 6.23,
+    "total": 84.14,
+    "status": "paid",
+    "created_at": "2025-12-01T13:06:23.691472",
+    "payment_method": "cash",
+    "paid_at": "2025-12-01T13:06:32.281978"
+  },
+  {
+    "id": "6a892359",
+    "customer_id": "fba2e88e",
+    "orders": [
+      "315880ac",
+      "135c73f5",
+      "73b6b51d",
+      "fbbe15fa",
+      "7868d63b",
+      "77d80f7e",
+      "72403063"
+    ],
+    "subtotal": 117.88,
+    "tax": 9.43,
+    "total": 127.31,
+    "status": "paid",
+    "created_at": "2025-12-01T13:53:31.354889",
+    "payment_method": "cash",
+    "paid_at": "2025-12-01T13:53:37.478876"
+  }
+]

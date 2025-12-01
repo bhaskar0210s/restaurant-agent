@@ -1,0 +1,259 @@
+[
+  {
+    "id": "ord001",
+    "customer_id": "cust001",
+    "table_id": "table03",
+    "items": [
+      {
+        "name": "Bruschetta",
+        "price": 8.99,
+        "quantity": 1
+      },
+      {
+        "name": "Ribeye Steak",
+        "price": 34.99,
+        "quantity": 2
+      },
+      {
+        "name": "Tiramisu",
+        "price": 8.99,
+        "quantity": 2
+      }
+    ],
+    "total": 96.95,
+    "status": "served",
+    "created_at": "2025-11-20T19:30:00"
+  },
+  {
+    "id": "ord002",
+    "customer_id": "cust001",
+    "table_id": "table01",
+    "items": [
+      {
+        "name": "Grilled Salmon",
+        "price": 24.99,
+        "quantity": 1
+      },
+      {
+        "name": "Fresh Lemonade",
+        "price": 4.99,
+        "quantity": 1
+      }
+    ],
+    "total": 29.98,
+    "status": "served",
+    "created_at": "2025-11-15T18:00:00"
+  },
+  {
+    "id": "ord003",
+    "customer_id": "cust003",
+    "table_id": "table02",
+    "items": [
+      {
+        "name": "Calamari",
+        "price": 12.99,
+        "quantity": 1
+      },
+      {
+        "name": "Fish and Chips",
+        "price": 16.99,
+        "quantity": 1
+      },
+      {
+        "name": "Soft Drink",
+        "price": 2.99,
+        "quantity": 2
+      }
+    ],
+    "total": 35.96,
+    "status": "served",
+    "created_at": "2025-11-22T20:15:00"
+  },
+  {
+    "id": "315880ac",
+    "customer_id": "fba2e88e",
+    "table_id": "table04",
+    "items": [
+      {
+        "name": "Soup of the Day",
+        "price": 6.99,
+        "quantity": 1
+      },
+      {
+        "name": "Soup of the Day",
+        "price": 6.99,
+        "quantity": 1
+      }
+    ],
+    "total": 13.98,
+    "status": "ready",
+    "created_at": "2025-12-01T11:53:46.648913",
+    "updated_at": "2025-12-01T11:54:02.625552"
+  },
+  {
+    "id": "135c73f5",
+    "customer_id": "fba2e88e",
+    "table_id": "table05",
+    "items": [
+      {
+        "name": "Soup of the Day",
+        "price": 6.99,
+        "quantity": 2
+      }
+    ],
+    "total": 13.98,
+    "status": "served",
+    "created_at": "2025-12-01T12:00:56.238820",
+    "updated_at": "2025-12-01T12:01:17.119304"
+  },
+  {
+    "id": "73b6b51d",
+    "customer_id": "fba2e88e",
+    "table_id": "table05",
+    "items": [
+      {
+        "name": "Vegetable Risotto",
+        "price": 17.99,
+        "quantity": 1
+      }
+    ],
+    "total": 17.99,
+    "status": "served",
+    "created_at": "2025-12-01T12:02:07.617464",
+    "updated_at": "2025-12-01T12:02:24.675865"
+  },
+  {
+    "id": "80c79495",
+    "customer_id": "fba2e88e",
+    "table_id": "table08",
+    "items": [
+      {
+        "name": "Calamari",
+        "price": 12.99,
+        "quantity": 1
+      }
+    ],
+    "total": 12.99,
+    "status": "pending",
+    "created_at": "2025-12-01T12:07:18.708597"
+  },
+  {
+    "id": "b80c32f6",
+    "customer_id": "fba2e88e",
+    "table_id": "table08",
+    "items": [
+      {
+        "name": "Chocolate Lava Cake",
+        "price": 9.99,
+        "quantity": 1
+      },
+      {
+        "name": "Coffee",
+        "price": 3.49,
+        "quantity": 1
+      }
+    ],
+    "total": 13.48,
+    "status": "pending",
+    "created_at": "2025-12-01T12:07:38.757488"
+  },
+  {
+    "id": "fbbe15fa",
+    "customer_id": "fba2e88e",
+    "table_id": "table10",
+    "items": [
+      {
+        "name": "Bruschetta",
+        "price": 8.99,
+        "quantity": 1
+      },
+      {
+        "name": "Soup of the Day",
+        "price": 6.99,
+        "quantity": 1
+      }
+    ],
+    "total": 15.98,
+    "status": "served",
+    "created_at": "2025-12-01T12:49:36.247811",
+    "updated_at": "2025-12-01T12:49:55.377707"
+  },
+  {
+    "id": "7868d63b",
+    "customer_id": "fba2e88e",
+    "table_id": "table01",
+    "items": [
+      {
+        "name": "Bruschetta",
+        "price": 8.99,
+        "quantity": 1
+      },
+      {
+        "name": "Soup of the Day",
+        "price": 6.99,
+        "quantity": 1
+      }
+    ],
+    "total": 15.98,
+    "status": "served",
+    "created_at": "2025-12-01T13:05:58.097948",
+    "updated_at": "2025-12-01T13:06:16.315082"
+  },
+  {
+    "id": "77d80f7e",
+    "customer_id": "fba2e88e",
+    "table_id": "table08",
+    "items": [
+      {
+        "name": "Tiramisu",
+        "price": 8.99,
+        "quantity": 1
+      },
+      {
+        "name": "Calamari",
+        "price": 12.99,
+        "quantity": 1
+      }
+    ],
+    "total": 21.98,
+    "status": "ready",
+    "created_at": "2025-12-01T13:52:43.910423",
+    "updated_at": "2025-12-01T13:52:55.304303"
+  },
+  {
+    "id": "72403063",
+    "customer_id": "fba2e88e",
+    "table_id": "table08",
+    "items": [
+      {
+        "name": "Vegetable Risotto",
+        "price": 17.99,
+        "quantity": 1
+      }
+    ],
+    "total": 17.99,
+    "status": "ready",
+    "created_at": "2025-12-01T13:53:09.102092",
+    "updated_at": "2025-12-01T13:53:18.017344"
+  },
+  {
+    "id": "da165381",
+    "customer_id": "fba2e88e",
+    "table_id": "table06",
+    "items": [
+      {
+        "name": "Soup of the Day",
+        "price": 6.99,
+        "quantity": 1
+      },
+      {
+        "name": "Vegetable Risotto",
+        "price": 17.99,
+        "quantity": 1
+      }
+    ],
+    "total": 24.98,
+    "status": "pending",
+    "created_at": "2025-12-01T18:57:22.529713"
+  }
+]

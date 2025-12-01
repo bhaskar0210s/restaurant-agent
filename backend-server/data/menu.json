@@ -1,0 +1,110 @@
+{
+  "items": [
+    {
+      "id": "app001",
+      "name": "Bruschetta",
+      "category": "appetizers",
+      "description": "Grilled bread topped with fresh tomatoes, basil, and olive oil",
+      "price": 8.99
+    },
+    {
+      "id": "app002",
+      "name": "Calamari",
+      "category": "appetizers",
+      "description": "Crispy fried squid served with marinara sauce",
+      "price": 12.99
+    },
+    {
+      "id": "app003",
+      "name": "Soup of the Day",
+      "category": "appetizers",
+      "description": "Chef's daily fresh soup selection",
+      "price": 6.99
+    },
+    {
+      "id": "main001",
+      "name": "Grilled Salmon",
+      "category": "mains",
+      "description": "Atlantic salmon with lemon butter sauce, served with seasonal vegetables",
+      "price": 24.99
+    },
+    {
+      "id": "main002",
+      "name": "Ribeye Steak",
+      "category": "mains",
+      "description": "12oz prime ribeye cooked to your preference, with mashed potatoes",
+      "price": 34.99
+    },
+    {
+      "id": "main003",
+      "name": "Chicken Parmesan",
+      "category": "mains",
+      "description": "Breaded chicken breast with marinara and melted mozzarella, served with pasta",
+      "price": 19.99
+    },
+    {
+      "id": "main004",
+      "name": "Vegetable Risotto",
+      "category": "mains",
+      "description": "Creamy arborio rice with seasonal vegetables and parmesan",
+      "price": 17.99
+    },
+    {
+      "id": "main005",
+      "name": "Fish and Chips",
+      "category": "mains",
+      "description": "Beer-battered cod with crispy fries and tartar sauce",
+      "price": 16.99
+    },
+    {
+      "id": "des001",
+      "name": "Tiramisu",
+      "category": "desserts",
+      "description": "Classic Italian coffee-flavored dessert",
+      "price": 8.99
+    },
+    {
+      "id": "des002",
+      "name": "Chocolate Lava Cake",
+      "category": "desserts",
+      "description": "Warm chocolate cake with molten center, served with vanilla ice cream",
+      "price": 9.99
+    },
+    {
+      "id": "des003",
+      "name": "Cheesecake",
+      "category": "desserts",
+      "description": "New York style cheesecake with berry compote",
+      "price": 8.49
+    },
+    {
+      "id": "drk001",
+      "name": "Soft Drink",
+      "category": "drinks",
+      "description": "Coke, Sprite, or Fanta",
+      "price": 2.99
+    },
+    {
+      "id": "drk002",
+      "name": "Fresh Lemonade",
+      "category": "drinks",
+      "description": "House-made lemonade with fresh lemons",
+      "price": 4.99
+    },
+    {
+      "id": "drk003",
+      "name": "Coffee",
+      "category": "drinks",
+      "description": "Freshly brewed coffee",
+      "price": 3.49
+    },
+    {
+      "id": "drk004",
+      "name": "Iced Tea",
+      "category": "drinks",
+      "description": "Refreshing iced tea",
+      "price": 3.49
+    }
+  ]
+}
+

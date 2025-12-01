@@ -1,0 +1,11 @@
+[project]
+name = "restaurant-backend-server"
+version = "0.1.0"
+description = "Restaurant database backend server"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastmcp>=2.11.3",
+    "uvicorn>=0.32.0",
+]
+

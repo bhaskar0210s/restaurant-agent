@@ -1,0 +1,34 @@
+[
+  {
+    "id": "cust001",
+    "name": "John Smith",
+    "phone": "555-0101",
+    "created_at": "2025-01-15T10:30:00",
+    "total_visits": 12,
+    "tab_balance": 0.0
+  },
+  {
+    "id": "cust002",
+    "name": "Sarah Johnson",
+    "phone": "555-0102",
+    "created_at": "2025-02-20T14:45:00",
+    "total_visits": 5,
+    "tab_balance": 25.5
+  },
+  {
+    "id": "cust003",
+    "name": "Mike Chen",
+    "phone": "555-0103",
+    "created_at": "2025-03-10T19:00:00",
+    "total_visits": 8,
+    "tab_balance": 0.0
+  },
+  {
+    "id": "fba2e88e",
+    "name": "Bhaskar",
+    "phone": "12345",
+    "created_at": "2025-12-01T11:42:22.889753",
+    "total_visits": 3,
+    "tab_balance": 0.0
+  }
+]

@@ -26,24 +26,33 @@ import sys
 # Add backend-server to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../../backend-server"))
 
-from server import (
-    lookup_customer,
-    create_customer,
-    get_customer,
-    get_reservations,
-    create_reservation,
-    check_table_availability,
-    assign_table,
-    release_table,
-    get_menu,
-    get_customer_orders,
-    create_order,
-    get_order_status,
-    update_order_status,
-    generate_bill,
-    process_payment,
-    add_to_tab,
-)
+# Import the mcp object to access tools
+from server import mcp
+
+# Access the underlying functions from FastMCP tools
+# FastMCP tools are FunctionTool objects, we need to get the underlying function
+def _get_tool_function(tool_name: str):
+    """Get the underlying function from a FastMCP tool."""
+    tool = mcp._tool_manager._tools.get(tool_name)
+    if tool and hasattr(tool, 'fn'):
+        return tool.fn
+    raise ValueError(f"Tool {tool_name} not found")
+
+# Create callable wrappers
+get_customer = _get_tool_function("get_customer")
+get_reservations = _get_tool_function("get_reservations")
+create_reservation = _get_tool_function("create_reservation")
+check_table_availability = _get_tool_function("check_table_availability")
+assign_table = _get_tool_function("assign_table")
+release_table = _get_tool_function("release_table")
+get_menu = _get_tool_function("get_menu")
+get_customer_orders = _get_tool_function("get_customer_orders")
+create_order = _get_tool_function("create_order")
+get_order_status = _get_tool_function("get_order_status")
+update_order_status = _get_tool_function("update_order_status")
+generate_bill = _get_tool_function("generate_bill")
+process_payment = _get_tool_function("process_payment")
+add_to_tab = _get_tool_function("add_to_tab")
 
 
 class TestBackendTools(unittest.TestCase):
@@ -195,38 +204,6 @@ class TestBackendTools(unittest.TestCase):
         return [] if filename != "menu.json" else {"items": []}
 
     # ============== Customer Management Tests ==============
-
-    def test_lookup_customer_by_phone(self):
-        """Test looking up customer by phone number."""
-        result = lookup_customer(phone="555-0101")
-        self.assertEqual(result["status"], "found")
-        self.assertEqual(result["customer"]["name"], "John Smith")
-        self.assertEqual(result["customer"]["id"], "cust001")
-
-    def test_lookup_customer_by_name(self):
-        """Test looking up customer by name (partial match)."""
-        result = lookup_customer(name="Sarah")
-        self.assertEqual(result["status"], "found")
-        self.assertEqual(result["customer"]["name"], "Sarah Johnson")
-
-    def test_lookup_customer_not_found(self):
-        """Test looking up non-existent customer."""
-        result = lookup_customer(phone="999-9999")
-        self.assertEqual(result["status"], "not_found")
-
-    def test_create_customer_new(self):
-        """Test creating a new customer."""
-        result = create_customer(name="Jane Doe", phone="555-9999")
-        self.assertEqual(result["status"], "created")
-        self.assertEqual(result["customer"]["name"], "Jane Doe")
-        self.assertEqual(result["customer"]["phone"], "555-9999")
-        self.assertIn("id", result["customer"])
-
-    def test_create_customer_duplicate(self):
-        """Test creating duplicate customer (same phone)."""
-        result = create_customer(name="Different Name", phone="555-0101")
-        self.assertEqual(result["status"], "exists")
-        self.assertEqual(result["customer"]["name"], "John Smith")
 
     def test_get_customer_existing(self):
         """Test getting existing customer."""

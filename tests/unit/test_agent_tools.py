@@ -24,8 +24,6 @@ import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../../"))
 
 from restaurant_agent.tools import (
-    lookup_customer,
-    create_customer,
     get_customer,
     get_reservations,
     create_reservation,
@@ -46,46 +44,6 @@ from restaurant_agent.tools import (
 class TestAgentTools(unittest.TestCase):
     """Test cases for agent tools (HTTP wrappers)."""
 
-    @patch("restaurant_agent.tools.httpx.Client")
-    def test_lookup_customer(self, mock_client_class):
-        """Test lookup_customer tool."""
-        mock_response = MagicMock()
-        mock_response.json.return_value = {
-            "result": {"status": "found", "customer": {"id": "cust001", "name": "John"}}
-        }
-        mock_response.raise_for_status.return_value = None
-
-        mock_client = MagicMock()
-        mock_client.__enter__.return_value = mock_client
-        mock_client.__exit__.return_value = None
-        mock_client.post.return_value = mock_response
-        mock_client_class.return_value = mock_client
-
-        result = lookup_customer(name="John", phone="555-0101")
-        self.assertEqual(result["status"], "found")
-        self.assertEqual(result["customer"]["name"], "John")
-
-    @patch("restaurant_agent.tools.httpx.Client")
-    def test_create_customer(self, mock_client_class):
-        """Test create_customer tool."""
-        mock_response = MagicMock()
-        mock_response.json.return_value = {
-            "result": {
-                "status": "created",
-                "customer": {"id": "cust002", "name": "Jane", "phone": "555-9999"},
-            }
-        }
-        mock_response.raise_for_status.return_value = None
-
-        mock_client = MagicMock()
-        mock_client.__enter__.return_value = mock_client
-        mock_client.__exit__.return_value = None
-        mock_client.post.return_value = mock_response
-        mock_client_class.return_value = mock_client
-
-        result = create_customer(name="Jane", phone="555-9999")
-        self.assertEqual(result["status"], "created")
-        self.assertEqual(result["customer"]["name"], "Jane")
 
     @patch("restaurant_agent.tools.httpx.Client")
     def test_get_customer(self, mock_client_class):
@@ -435,7 +393,7 @@ class TestAgentTools(unittest.TestCase):
         mock_client_class.return_value = mock_client
 
         with self.assertRaises(RuntimeError) as context:
-            lookup_customer(name="Test")
+            get_customer(name="Test", phone="555-0000")
         self.assertIn("Backend API error", str(context.exception))
 
     @patch("restaurant_agent.tools.httpx.Client")
@@ -448,7 +406,7 @@ class TestAgentTools(unittest.TestCase):
         mock_client_class.return_value = mock_client
 
         with self.assertRaises(Exception):
-            lookup_customer(name="Test")
+            get_customer(name="Test", phone="555-0000")
 
 
 if __name__ == "__main__":

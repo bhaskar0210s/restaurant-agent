@@ -4,7 +4,7 @@ import os
 
 from dotenv import load_dotenv
 from google.adk.agents import Agent
-from google.adk.tools.mcp_tool import MCPToolset, StreamableHTTPConnectionParams
+from google.adk.tools.mcp_tool import McpToolset, StreamableHTTPConnectionParams
 
 from ..prompts import CASHIER_INSTRUCTION
 
@@ -20,7 +20,7 @@ cashier_agent = Agent(
     Transfers back to waiter with bill details.""",
     instruction=CASHIER_INSTRUCTION,
     tools=[
-        MCPToolset(
+        McpToolset(
             connection_params=StreamableHTTPConnectionParams(
                 url=BACKEND_API_URL
             )

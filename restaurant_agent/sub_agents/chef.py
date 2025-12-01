@@ -4,7 +4,7 @@ import os
 
 from dotenv import load_dotenv
 from google.adk.agents import Agent
-from google.adk.tools.mcp_tool import MCPToolset, StreamableHTTPConnectionParams
+from google.adk.tools.mcp_tool import McpToolset, StreamableHTTPConnectionParams
 
 from ..prompts import CHEF_INSTRUCTION
 from .server import server_agent
@@ -21,7 +21,7 @@ chef_agent = Agent(
     status to 'ready' and delegates to server_agent for delivery.""",
     instruction=CHEF_INSTRUCTION,
     tools=[
-        MCPToolset(
+        McpToolset(
             connection_params=StreamableHTTPConnectionParams(
                 url=BACKEND_API_URL
             )

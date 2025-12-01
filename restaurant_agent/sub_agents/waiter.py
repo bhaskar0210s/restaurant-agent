@@ -4,7 +4,7 @@ import os
 
 from dotenv import load_dotenv
 from google.adk.agents import Agent
-from google.adk.tools.mcp_tool import MCPToolset, StreamableHTTPConnectionParams
+from google.adk.tools.mcp_tool import McpToolset, StreamableHTTPConnectionParams
 
 from ..prompts import WAITER_INSTRUCTION
 from .chef import chef_agent
@@ -22,7 +22,7 @@ waiter_agent = Agent(
     with chef and cashier. The main point of contact for seated customers.""",
     instruction=WAITER_INSTRUCTION,
     tools=[
-        MCPToolset(
+        McpToolset(
             connection_params=StreamableHTTPConnectionParams(
                 url=BACKEND_API_URL
             )

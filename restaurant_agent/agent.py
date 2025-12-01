@@ -5,7 +5,7 @@ import os
 
 from dotenv import load_dotenv
 from google.adk.agents import Agent
-from google.adk.tools.mcp_tool import MCPToolset, StreamableHTTPConnectionParams
+from google.adk.tools.mcp_tool import McpToolset, StreamableHTTPConnectionParams
 
 from .prompts import CAPTAIN_INSTRUCTION
 from .sub_agents import waiter_agent
@@ -30,7 +30,7 @@ root_agent = Agent(
     description="The Captain (host) of the restaurant who greets customers, manages reservations and tables, and coordinates the dining experience.",
     instruction=CAPTAIN_INSTRUCTION,
     tools=[
-        MCPToolset(
+        McpToolset(
             connection_params=StreamableHTTPConnectionParams(
                 url=BACKEND_API_URL
             )

@@ -255,5 +255,328 @@
     "total": 24.98,
     "status": "pending",
     "created_at": "2025-12-01T18:57:22.529713"
+  },
+  {
+    "id": "775a3624",
+    "customer_id": "fba2e88e",
+    "table_id": "table08",
+    "items": [
+      {
+        "name": "Calamari",
+        "price": 12.99,
+        "quantity": 2
+      },
+      {
+        "name": "Fish and Chips",
+        "price": 16.99,
+        "quantity": 3
+      }
+    ],
+    "total": 76.95,
+    "status": "served",
+    "created_at": "2025-12-01T19:12:55.589934",
+    "updated_at": "2025-12-01T19:13:18.489696"
+  },
+  {
+    "id": "8cac1565",
+    "customer_id": "fba2e88e",
+    "table_id": "table08",
+    "items": [
+      {
+        "name": "Ribeye Steak",
+        "price": 34.99,
+        "quantity": 2
+      },
+      {
+        "name": "Calamari",
+        "price": 12.99,
+        "quantity": 1
+      },
+      {
+        "name": "Bruschetta",
+        "price": 8.99,
+        "quantity": 2
+      }
+    ],
+    "total": 100.95,
+    "status": "ready",
+    "created_at": "2025-12-01T19:23:00.964108",
+    "updated_at": "2025-12-01T19:23:14.022169"
+  },
+  {
+    "id": "bd6aca3a",
+    "customer_id": "fba2e88e",
+    "table_id": "table08",
+    "items": [
+      {
+        "name": "Fresh Lemonade",
+        "price": 4.99,
+        "quantity": 5
+      }
+    ],
+    "total": 24.95,
+    "status": "pending",
+    "created_at": "2025-12-01T19:23:55.435509"
+  },
+  {
+    "id": "1d703a5a",
+    "customer_id": "fba2e88e",
+    "table_id": "table08",
+    "items": [
+      {
+        "name": "Ribeye Steak",
+        "price": 34.99,
+        "quantity": 1
+      }
+    ],
+    "total": 34.99,
+    "status": "pending",
+    "created_at": "2025-12-01T19:32:55.421764"
+  },
+  {
+    "id": "372cc854",
+    "customer_id": "fba2e88e",
+    "table_id": "table08",
+    "items": [
+      {
+        "name": "Ribeye Steak",
+        "price": 34.99,
+        "quantity": 2
+      },
+      {
+        "name": "Calamari",
+        "price": 12.99,
+        "quantity": 1
+      },
+      {
+        "name": "Bruschetta",
+        "price": 8.99,
+        "quantity": 2
+      }
+    ],
+    "total": 100.95,
+    "status": "ready",
+    "created_at": "2025-12-01T19:32:59.667686",
+    "updated_at": "2025-12-01T19:33:45.938151"
+  },
+  {
+    "id": "50e8eca0",
+    "customer_id": "fba2e88e",
+    "table_id": "table08",
+    "items": [
+      {
+        "name": "Fresh Lemonade",
+        "price": 4.99,
+        "quantity": 5
+      }
+    ],
+    "total": 24.95,
+    "status": "pending",
+    "created_at": "2025-12-01T19:33:54.503363"
+  },
+  {
+    "id": "56acd267",
+    "customer_id": "fba2e88e",
+    "table_id": "table08",
+    "items": [
+      {
+        "name": "Ribeye Steak",
+        "price": 34.99,
+        "quantity": 2
+      },
+      {
+        "name": "Calamari",
+        "price": 12.99,
+        "quantity": 1
+      },
+      {
+        "name": "Bruschetta",
+        "price": 8.99,
+        "quantity": 2
+      }
+    ],
+    "total": 100.95,
+    "status": "ready",
+    "created_at": "2025-12-01T19:35:14.844493",
+    "updated_at": "2025-12-01T19:35:20.720706"
+  },
+  {
+    "id": "55a9d917",
+    "customer_id": "fba2e88e",
+    "table_id": "table08",
+    "items": [
+      {
+        "name": "Fresh Lemonade",
+        "price": 4.99,
+        "quantity": 5
+      }
+    ],
+    "total": 24.95,
+    "status": "pending",
+    "created_at": "2025-12-01T19:35:48.860372"
+  },
+  {
+    "id": "74e2dbe5",
+    "customer_id": "fba2e88e",
+    "table_id": "table08",
+    "items": [
+      {
+        "name": "Ribeye Steak",
+        "price": 34.99,
+        "quantity": 2
+      },
+      {
+        "name": "Calamari",
+        "price": 12.99,
+        "quantity": 1
+      },
+      {
+        "name": "Bruschetta",
+        "price": 8.99,
+        "quantity": 2
+      }
+    ],
+    "total": 100.95,
+    "status": "preparing",
+    "created_at": "2025-12-01T19:36:54.132422",
+    "updated_at": "2025-12-01T19:37:02.338556"
+  },
+  {
+    "id": "65251b88",
+    "customer_id": "fba2e88e",
+    "table_id": "table08",
+    "items": [
+      {
+        "name": "Fresh Lemonade",
+        "price": 4.99,
+        "quantity": 5
+      }
+    ],
+    "total": 24.95,
+    "status": "pending",
+    "created_at": "2025-12-01T19:37:09.018543"
+  },
+  {
+    "id": "c64328e2",
+    "customer_id": "fba2e88e",
+    "table_id": "table08",
+    "items": [
+      {
+        "name": "Ribeye Steak",
+        "price": 34.99,
+        "quantity": 2
+      },
+      {
+        "name": "Calamari",
+        "price": 12.99,
+        "quantity": 1
+      },
+      {
+        "name": "Bruschetta",
+        "price": 8.99,
+        "quantity": 2
+      }
+    ],
+    "total": 100.95,
+    "status": "preparing",
+    "created_at": "2025-12-01T19:38:48.893953",
+    "updated_at": "2025-12-01T19:38:56.601900"
+  },
+  {
+    "id": "2ae10cde",
+    "customer_id": "fba2e88e",
+    "table_id": "table08",
+    "items": [
+      {
+        "name": "Fresh Lemonade",
+        "price": 4.99,
+        "quantity": 5
+      }
+    ],
+    "total": 24.95,
+    "status": "pending",
+    "created_at": "2025-12-01T19:39:03.266223"
+  },
+  {
+    "id": "fa8cab85",
+    "customer_id": "fba2e88e",
+    "table_id": "table08",
+    "items": [
+      {
+        "name": "Ribeye Steak",
+        "price": 34.99,
+        "quantity": 2
+      },
+      {
+        "name": "Calamari",
+        "price": 12.99,
+        "quantity": 1
+      },
+      {
+        "name": "Bruschetta",
+        "price": 8.99,
+        "quantity": 2
+      }
+    ],
+    "total": 100.95,
+    "status": "served",
+    "created_at": "2025-12-01T19:41:38.848982",
+    "updated_at": "2025-12-01T19:41:46.689847"
+  },
+  {
+    "id": "ee1ec33d",
+    "customer_id": "fba2e88e",
+    "table_id": "table08",
+    "items": [
+      {
+        "name": "Fresh Lemonade",
+        "price": 4.99,
+        "quantity": 5
+      }
+    ],
+    "total": 24.95,
+    "status": "pending",
+    "created_at": "2025-12-01T19:41:57.657492"
+  },
+  {
+    "id": "25b7b33c",
+    "customer_id": "fba2e88e",
+    "table_id": "table08",
+    "items": [
+      {
+        "name": "Ribeye Steak",
+        "price": 34.99,
+        "quantity": 2
+      },
+      {
+        "name": "Calamari",
+        "price": 12.99,
+        "quantity": 1
+      },
+      {
+        "name": "Bruschetta",
+        "price": 8.99,
+        "quantity": 2
+      }
+    ],
+    "total": 100.95,
+    "status": "ready",
+    "created_at": "2025-12-01T19:44:29.910287",
+    "updated_at": "2025-12-01T19:44:39.077589"
+  },
+  {
+    "id": "800665f0",
+    "customer_id": "fba2e88e",
+    "table_id": "table08",
+    "items": [
+      {
+        "name": "Fresh Lemonade",
+        "price": 4.99,
+        "quantity": 5
+      }
+    ],
+    "total": 24.95,
+    "status": "pending",
+    "created_at": "2025-12-01T19:44:46.694991"
   }
 ]

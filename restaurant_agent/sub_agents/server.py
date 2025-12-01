@@ -4,7 +4,7 @@ import os
 
 from dotenv import load_dotenv
 from google.adk.agents import Agent
-from google.adk.tools.mcp_tool import MCPToolset, StreamableHTTPConnectionParams
+from google.adk.tools.mcp_tool import McpToolset, StreamableHTTPConnectionParams
 
 from ..prompts import SERVER_INSTRUCTION
 
@@ -20,7 +20,7 @@ server_agent = Agent(
     Updates order status to 'served' and transfers back to waiter.""",
     instruction=SERVER_INSTRUCTION,
     tools=[
-        MCPToolset(
+        McpToolset(
             connection_params=StreamableHTTPConnectionParams(
                 url=BACKEND_API_URL
             )

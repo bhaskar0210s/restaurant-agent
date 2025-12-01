@@ -1,0 +1,1389 @@
+{
+  "eval_set_id": "HappyFlow",
+  "name": "HappyFlow",
+  "eval_cases": [
+    {
+      "eval_id": "happyflowcasef5833d",
+      "conversation": [
+        {
+          "invocation_id": "e-516ae083-3f3a-41ac-ada8-7ee9967eacec",
+          "user_content": {
+            "parts": [
+              {
+                "text": "hi"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Hello! Welcome to our restaurant. Can I get your name and phone number, please?\n"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1764597101.420658
+        },
+        {
+          "invocation_id": "e-b4ee9b21-0542-4454-b8e2-0c0ea4dee78e",
+          "user_content": {
+            "parts": [
+              {
+                "text": "My name is Bhaskar and my phone number is 12345."
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "I found your reservation for today at 7:00 PM for 10 people.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "captain_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-6356f4d0-156b-48d7-ba75-fa314463de45",
+                        "args": {
+                          "name": "Bhaskar",
+                          "phone": "12345"
+                        },
+                        "name": "get_customer"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "captain_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-6356f4d0-156b-48d7-ba75-fa314463de45",
+                        "name": "get_customer",
+                        "response": {
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "{\"status\":\"found\",\"customer\":{\"id\":\"fba2e88e\",\"name\":\"Bhaskar\",\"phone\":\"12345\",\"created_at\":\"2025-12-01T11:42:22.889753\",\"total_visits\":3,\"tab_balance\":0.0}}"
+                            }
+                          ],
+                          "structuredContent": {
+                            "status": "found",
+                            "customer": {
+                              "id": "fba2e88e",
+                              "name": "Bhaskar",
+                              "phone": "12345",
+                              "created_at": "2025-12-01T11:42:22.889753",
+                              "total_visits": 3,
+                              "tab_balance": 0.0
+                            }
+                          },
+                          "isError": false
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "captain_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-d94bd7b5-9817-4dd5-a13e-6d8ad6921615",
+                        "args": {
+                          "customer_id": "fba2e88e"
+                        },
+                        "name": "get_reservations"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "captain_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-d94bd7b5-9817-4dd5-a13e-6d8ad6921615",
+                        "name": "get_reservations",
+                        "response": {
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "{\"status\":\"success\",\"reservations\":[{\"id\":\"b03a33b0\",\"customer_id\":\"fba2e88e\",\"date\":\"2025-12-01\",\"time\":\"19:00\",\"party_size\":10,\"status\":\"confirmed\",\"created_at\":\"2025-12-01T12:04:23.499378\"}]}"
+                            }
+                          ],
+                          "structuredContent": {
+                            "status": "success",
+                            "reservations": [
+                              {
+                                "id": "b03a33b0",
+                                "customer_id": "fba2e88e",
+                                "date": "2025-12-01",
+                                "time": "19:00",
+                                "party_size": 10,
+                                "status": "confirmed",
+                                "created_at": "2025-12-01T12:04:23.499378"
+                              }
+                            ]
+                          },
+                          "isError": false
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1764597104.519702
+        },
+        {
+          "invocation_id": "e-b221a60b-d5e3-4b21-b54d-21187c6d32eb",
+          "user_content": {
+            "parts": [
+              {
+                "text": "ok"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Unfortunately, we don't have any tables available for a party of 10 at the moment. Would you like to wait for a table to become available?\n"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "captain_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-00192c2c-e364-4b56-b0c8-bbf0ebad0c0f",
+                        "args": {
+                          "party_size": 10
+                        },
+                        "name": "check_table_availability"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "captain_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-00192c2c-e364-4b56-b0c8-bbf0ebad0c0f",
+                        "name": "check_table_availability",
+                        "response": {
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "{\"status\":\"success\",\"available_tables\":[],\"count\":0}"
+                            }
+                          ],
+                          "structuredContent": {
+                            "status": "success",
+                            "available_tables": [],
+                            "count": 0
+                          },
+                          "isError": false
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1764597116.106536
+        },
+        {
+          "invocation_id": "e-fd86f540-e79c-44cf-9a3f-36273b96cdcc",
+          "user_content": {
+            "parts": [
+              {
+                "text": "yes I'll wait"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Please follow me to your table.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "captain_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "Thank you for waiting. I'll check back in a moment."
+                    },
+                    {
+                      "function_call": {
+                        "id": "adk-7eb010c9-13e7-444e-833b-5748dd2d8672",
+                        "args": {
+                          "capacity": 10
+                        },
+                        "name": "release_table"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "captain_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-7eb010c9-13e7-444e-833b-5748dd2d8672",
+                        "name": "release_table",
+                        "response": {
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "{\"status\":\"success\",\"table\":{\"id\":\"table08\",\"number\":8,\"capacity\":10,\"location\":\"private\",\"status\":\"available\",\"customer_id\":null,\"seated_at\":null}}"
+                            }
+                          ],
+                          "structuredContent": {
+                            "status": "success",
+                            "table": {
+                              "id": "table08",
+                              "number": 8,
+                              "capacity": 10,
+                              "location": "private",
+                              "status": "available",
+                              "customer_id": null,
+                              "seated_at": null
+                            }
+                          },
+                          "isError": false
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "captain_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "Great news! A table is now available."
+                    },
+                    {
+                      "function_call": {
+                        "id": "adk-c6760b60-96e2-4a8d-8771-1fe41db0644c",
+                        "args": {
+                          "party_size": 10
+                        },
+                        "name": "check_table_availability"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "captain_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-c6760b60-96e2-4a8d-8771-1fe41db0644c",
+                        "name": "check_table_availability",
+                        "response": {
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "{\"status\":\"success\",\"available_tables\":[{\"id\":\"table08\",\"number\":8,\"capacity\":10,\"location\":\"private\",\"status\":\"available\",\"customer_id\":null,\"seated_at\":null}],\"count\":1}"
+                            }
+                          ],
+                          "structuredContent": {
+                            "status": "success",
+                            "available_tables": [
+                              {
+                                "id": "table08",
+                                "number": 8,
+                                "capacity": 10,
+                                "location": "private",
+                                "status": "available",
+                                "customer_id": null,
+                                "seated_at": null
+                              }
+                            ],
+                            "count": 1
+                          },
+                          "isError": false
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "captain_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-d4723fb4-50b1-4605-acd0-9a0873af0ae4",
+                        "args": {
+                          "table_id": "table08",
+                          "customer_id": "fba2e88e"
+                        },
+                        "name": "assign_table"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "captain_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-d4723fb4-50b1-4605-acd0-9a0873af0ae4",
+                        "name": "assign_table",
+                        "response": {
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "{\"status\":\"success\",\"table\":{\"id\":\"table08\",\"number\":8,\"capacity\":10,\"location\":\"private\",\"status\":\"occupied\",\"customer_id\":\"fba2e88e\",\"seated_at\":\"2025-12-01T19:22:13.274454\"}}"
+                            }
+                          ],
+                          "structuredContent": {
+                            "status": "success",
+                            "table": {
+                              "id": "table08",
+                              "number": 8,
+                              "capacity": 10,
+                              "location": "private",
+                              "status": "occupied",
+                              "customer_id": "fba2e88e",
+                              "seated_at": "2025-12-01T19:22:13.274454"
+                            }
+                          },
+                          "isError": false
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1764597127.396715
+        },
+        {
+          "invocation_id": "e-3417e7df-dd71-4996-b170-d309d27ab5e7",
+          "user_content": {
+            "parts": [
+              {
+                "text": "sure"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Hello Bhaskar! Welcome. It's great to see you again. I see you've enjoyed our Calamari and Fish and Chips in the past.\n\nHere is our menu:\n\n**Appetizers:**\n*   Bruschetta: $8.99\n*   Calamari: $12.99\n*   Soup of the Day: $6.99\n\n**Mains:**\n*   Grilled Salmon: $24.99\n*   Ribeye Steak: $34.99\n*   Chicken Parmesan: $19.99\n*   Vegetable Risotto: $17.99\n*   Fish and Chips: $16.99\n\n**Desserts:**\n*   Tiramisu: $8.99\n*   Chocolate Lava Cake: $9.99\n*   Cheesecake: $8.49\n\n**Drinks:**\n*   Soft Drink: $2.99\n*   Fresh Lemonade: $4.99\n*   Coffee: $3.49\n*   Iced Tea: $3.49\n\nWhat would you like to order?"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "captain_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-ba5cf056-850f-4f07-b2dd-82285f1a0216",
+                        "args": {
+                          "agent_name": "waiter_agent"
+                        },
+                        "name": "transfer_to_agent"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "captain_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-ba5cf056-850f-4f07-b2dd-82285f1a0216",
+                        "name": "transfer_to_agent",
+                        "response": {
+                          "result": null
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "waiter_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-d65be949-e616-435a-8a37-e855b4ce5a1c",
+                        "args": {
+                          "customer_id": "fba2e88e"
+                        },
+                        "name": "get_customer_orders"
+                      }
+                    },
+                    {
+                      "function_call": {
+                        "id": "adk-f788378c-8b70-4d47-8508-d6457d6555dc",
+                        "args": {},
+                        "name": "get_menu"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "waiter_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-d65be949-e616-435a-8a37-e855b4ce5a1c",
+                        "name": "get_customer_orders",
+                        "response": {
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "{\"status\":\"success\",\"orders\":[{\"id\":\"775a3624\",\"customer_id\":\"fba2e88e\",\"table_id\":\"table08\",\"items\":[{\"name\":\"Calamari\",\"price\":12.99,\"quantity\":2},{\"name\":\"Fish and Chips\",\"price\":16.99,\"quantity\":3}],\"total\":76.95,\"status\":\"served\",\"created_at\":\"2025-12-01T19:12:55.589934\",\"updated_at\":\"2025-12-01T19:13:18.489696\"},{\"id\":\"da165381\",\"customer_id\":\"fba2e88e\",\"table_id\":\"table06\",\"items\":[{\"name\":\"Soup of the Day\",\"price\":6.99,\"quantity\":1},{\"name\":\"Vegetable Risotto\",\"price\":17.99,\"quantity\":1}],\"total\":24.98,\"status\":\"pending\",\"created_at\":\"2025-12-01T18:57:22.529713\"},{\"id\":\"72403063\",\"customer_id\":\"fba2e88e\",\"table_id\":\"table08\",\"items\":[{\"name\":\"Vegetable Risotto\",\"price\":17.99,\"quantity\":1}],\"total\":17.99,\"status\":\"ready\",\"created_at\":\"2025-12-01T13:53:09.102092\",\"updated_at\":\"2025-12-01T13:53:18.017344\"},{\"id\":\"77d80f7e\",\"customer_id\":\"fba2e88e\",\"table_id\":\"table08\",\"items\":[{\"name\":\"Tiramisu\",\"price\":8.99,\"quantity\":1},{\"name\":\"Calamari\",\"price\":12.99,\"quantity\":1}],\"total\":21.98,\"status\":\"ready\",\"created_at\":\"2025-12-01T13:52:43.910423\",\"updated_at\":\"2025-12-01T13:52:55.304303\"},{\"id\":\"7868d63b\",\"customer_id\":\"fba2e88e\",\"table_id\":\"table01\",\"items\":[{\"name\":\"Bruschetta\",\"price\":8.99,\"quantity\":1},{\"name\":\"Soup of the Day\",\"price\":6.99,\"quantity\":1}],\"total\":15.98,\"status\":\"served\",\"created_at\":\"2025-12-01T13:05:58.097948\",\"updated_at\":\"2025-12-01T13:06:16.315082\"}]}"
+                            }
+                          ],
+                          "structuredContent": {
+                            "status": "success",
+                            "orders": [
+                              {
+                                "id": "775a3624",
+                                "customer_id": "fba2e88e",
+                                "table_id": "table08",
+                                "items": [
+                                  {
+                                    "name": "Calamari",
+                                    "price": 12.99,
+                                    "quantity": 2
+                                  },
+                                  {
+                                    "name": "Fish and Chips",
+                                    "price": 16.99,
+                                    "quantity": 3
+                                  }
+                                ],
+                                "total": 76.95,
+                                "status": "served",
+                                "created_at": "2025-12-01T19:12:55.589934",
+                                "updated_at": "2025-12-01T19:13:18.489696"
+                              },
+                              {
+                                "id": "da165381",
+                                "customer_id": "fba2e88e",
+                                "table_id": "table06",
+                                "items": [
+                                  {
+                                    "name": "Soup of the Day",
+                                    "price": 6.99,
+                                    "quantity": 1
+                                  },
+                                  {
+                                    "name": "Vegetable Risotto",
+                                    "price": 17.99,
+                                    "quantity": 1
+                                  }
+                                ],
+                                "total": 24.98,
+                                "status": "pending",
+                                "created_at": "2025-12-01T18:57:22.529713"
+                              },
+                              {
+                                "id": "72403063",
+                                "customer_id": "fba2e88e",
+                                "table_id": "table08",
+                                "items": [
+                                  {
+                                    "name": "Vegetable Risotto",
+                                    "price": 17.99,
+                                    "quantity": 1
+                                  }
+                                ],
+                                "total": 17.99,
+                                "status": "ready",
+                                "created_at": "2025-12-01T13:53:09.102092",
+                                "updated_at": "2025-12-01T13:53:18.017344"
+                              },
+                              {
+                                "id": "77d80f7e",
+                                "customer_id": "fba2e88e",
+                                "table_id": "table08",
+                                "items": [
+                                  {
+                                    "name": "Tiramisu",
+                                    "price": 8.99,
+                                    "quantity": 1
+                                  },
+                                  {
+                                    "name": "Calamari",
+                                    "price": 12.99,
+                                    "quantity": 1
+                                  }
+                                ],
+                                "total": 21.98,
+                                "status": "ready",
+                                "created_at": "2025-12-01T13:52:43.910423",
+                                "updated_at": "2025-12-01T13:52:55.304303"
+                              },
+                              {
+                                "id": "7868d63b",
+                                "customer_id": "fba2e88e",
+                                "table_id": "table01",
+                                "items": [
+                                  {
+                                    "name": "Bruschetta",
+                                    "price": 8.99,
+                                    "quantity": 1
+                                  },
+                                  {
+                                    "name": "Soup of the Day",
+                                    "price": 6.99,
+                                    "quantity": 1
+                                  }
+                                ],
+                                "total": 15.98,
+                                "status": "served",
+                                "created_at": "2025-12-01T13:05:58.097948",
+                                "updated_at": "2025-12-01T13:06:16.315082"
+                              }
+                            ]
+                          },
+                          "isError": false
+                        }
+                      }
+                    },
+                    {
+                      "function_response": {
+                        "id": "adk-f788378c-8b70-4d47-8508-d6457d6555dc",
+                        "name": "get_menu",
+                        "response": {
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "{\"status\":\"success\",\"items\":[{\"id\":\"app001\",\"name\":\"Bruschetta\",\"category\":\"appetizers\",\"description\":\"Grilled bread topped with fresh tomatoes, basil, and olive oil\",\"price\":8.99},{\"id\":\"app002\",\"name\":\"Calamari\",\"category\":\"appetizers\",\"description\":\"Crispy fried squid served with marinara sauce\",\"price\":12.99},{\"id\":\"app003\",\"name\":\"Soup of the Day\",\"category\":\"appetizers\",\"description\":\"Chef's daily fresh soup selection\",\"price\":6.99},{\"id\":\"main001\",\"name\":\"Grilled Salmon\",\"category\":\"mains\",\"description\":\"Atlantic salmon with lemon butter sauce, served with seasonal vegetables\",\"price\":24.99},{\"id\":\"main002\",\"name\":\"Ribeye Steak\",\"category\":\"mains\",\"description\":\"12oz prime ribeye cooked to your preference, with mashed potatoes\",\"price\":34.99},{\"id\":\"main003\",\"name\":\"Chicken Parmesan\",\"category\":\"mains\",\"description\":\"Breaded chicken breast with marinara and melted mozzarella, served with pasta\",\"price\":19.99},{\"id\":\"main004\",\"name\":\"Vegetable Risotto\",\"category\":\"mains\",\"description\":\"Creamy arborio rice with seasonal vegetables and parmesan\",\"price\":17.99},{\"id\":\"main005\",\"name\":\"Fish and Chips\",\"category\":\"mains\",\"description\":\"Beer-battered cod with crispy fries and tartar sauce\",\"price\":16.99},{\"id\":\"des001\",\"name\":\"Tiramisu\",\"category\":\"desserts\",\"description\":\"Classic Italian coffee-flavored dessert\",\"price\":8.99},{\"id\":\"des002\",\"name\":\"Chocolate Lava Cake\",\"category\":\"desserts\",\"description\":\"Warm chocolate cake with molten center, served with vanilla ice cream\",\"price\":9.99},{\"id\":\"des003\",\"name\":\"Cheesecake\",\"category\":\"desserts\",\"description\":\"New York style cheesecake with berry compote\",\"price\":8.49},{\"id\":\"drk001\",\"name\":\"Soft Drink\",\"category\":\"drinks\",\"description\":\"Coke, Sprite, or Fanta\",\"price\":2.99},{\"id\":\"drk002\",\"name\":\"Fresh Lemonade\",\"category\":\"drinks\",\"description\":\"House-made lemonade with fresh lemons\",\"price\":4.99},{\"id\":\"drk003\",\"name\":\"Coffee\",\"category\":\"drinks\",\"description\":\"Freshly brewed coffee\",\"price\":3.49},{\"id\":\"drk004\",\"name\":\"Iced Tea\",\"category\":\"drinks\",\"description\":\"Refreshing iced tea\",\"price\":3.49}]}"
+                            }
+                          ],
+                          "structuredContent": {
+                            "status": "success",
+                            "items": [
+                              {
+                                "id": "app001",
+                                "name": "Bruschetta",
+                                "category": "appetizers",
+                                "description": "Grilled bread topped with fresh tomatoes, basil, and olive oil",
+                                "price": 8.99
+                              },
+                              {
+                                "id": "app002",
+                                "name": "Calamari",
+                                "category": "appetizers",
+                                "description": "Crispy fried squid served with marinara sauce",
+                                "price": 12.99
+                              },
+                              {
+                                "id": "app003",
+                                "name": "Soup of the Day",
+                                "category": "appetizers",
+                                "description": "Chef's daily fresh soup selection",
+                                "price": 6.99
+                              },
+                              {
+                                "id": "main001",
+                                "name": "Grilled Salmon",
+                                "category": "mains",
+                                "description": "Atlantic salmon with lemon butter sauce, served with seasonal vegetables",
+                                "price": 24.99
+                              },
+                              {
+                                "id": "main002",
+                                "name": "Ribeye Steak",
+                                "category": "mains",
+                                "description": "12oz prime ribeye cooked to your preference, with mashed potatoes",
+                                "price": 34.99
+                              },
+                              {
+                                "id": "main003",
+                                "name": "Chicken Parmesan",
+                                "category": "mains",
+                                "description": "Breaded chicken breast with marinara and melted mozzarella, served with pasta",
+                                "price": 19.99
+                              },
+                              {
+                                "id": "main004",
+                                "name": "Vegetable Risotto",
+                                "category": "mains",
+                                "description": "Creamy arborio rice with seasonal vegetables and parmesan",
+                                "price": 17.99
+                              },
+                              {
+                                "id": "main005",
+                                "name": "Fish and Chips",
+                                "category": "mains",
+                                "description": "Beer-battered cod with crispy fries and tartar sauce",
+                                "price": 16.99
+                              },
+                              {
+                                "id": "des001",
+                                "name": "Tiramisu",
+                                "category": "desserts",
+                                "description": "Classic Italian coffee-flavored dessert",
+                                "price": 8.99
+                              },
+                              {
+                                "id": "des002",
+                                "name": "Chocolate Lava Cake",
+                                "category": "desserts",
+                                "description": "Warm chocolate cake with molten center, served with vanilla ice cream",
+                                "price": 9.99
+                              },
+                              {
+                                "id": "des003",
+                                "name": "Cheesecake",
+                                "category": "desserts",
+                                "description": "New York style cheesecake with berry compote",
+                                "price": 8.49
+                              },
+                              {
+                                "id": "drk001",
+                                "name": "Soft Drink",
+                                "category": "drinks",
+                                "description": "Coke, Sprite, or Fanta",
+                                "price": 2.99
+                              },
+                              {
+                                "id": "drk002",
+                                "name": "Fresh Lemonade",
+                                "category": "drinks",
+                                "description": "House-made lemonade with fresh lemons",
+                                "price": 4.99
+                              },
+                              {
+                                "id": "drk003",
+                                "name": "Coffee",
+                                "category": "drinks",
+                                "description": "Freshly brewed coffee",
+                                "price": 3.49
+                              },
+                              {
+                                "id": "drk004",
+                                "name": "Iced Tea",
+                                "category": "drinks",
+                                "description": "Refreshing iced tea",
+                                "price": 3.49
+                              }
+                            ]
+                          },
+                          "isError": false
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1764597138.043844
+        },
+        {
+          "invocation_id": "e-db746536-e9ef-4bba-af09-2bb82c5b93f8",
+          "user_content": {
+            "parts": [
+              {
+                "text": "I'll have 2 Ribeye Steak, 1 Calamari, and 2  Bruschetta."
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Excellent choice! Would you like anything else?"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "waiter_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-74f7c3fd-3364-43e0-afd9-8f4bc50f4137",
+                        "args": {
+                          "table_id": "table08",
+                          "items": [
+                            {
+                              "name": "Ribeye Steak",
+                              "quantity": 2
+                            },
+                            {
+                              "quantity": 1,
+                              "name": "Calamari"
+                            },
+                            {
+                              "quantity": 2,
+                              "name": "Bruschetta"
+                            }
+                          ],
+                          "customer_id": "fba2e88e"
+                        },
+                        "name": "create_order"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "waiter_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-74f7c3fd-3364-43e0-afd9-8f4bc50f4137",
+                        "name": "create_order",
+                        "response": {
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "{\"status\":\"created\",\"order\":{\"id\":\"8cac1565\",\"customer_id\":\"fba2e88e\",\"table_id\":\"table08\",\"items\":[{\"name\":\"Ribeye Steak\",\"price\":34.99,\"quantity\":2},{\"name\":\"Calamari\",\"price\":12.99,\"quantity\":1},{\"name\":\"Bruschetta\",\"price\":8.99,\"quantity\":2}],\"total\":100.95,\"status\":\"pending\",\"created_at\":\"2025-12-01T19:23:00.964108\"}}"
+                            }
+                          ],
+                          "structuredContent": {
+                            "status": "created",
+                            "order": {
+                              "id": "8cac1565",
+                              "customer_id": "fba2e88e",
+                              "table_id": "table08",
+                              "items": [
+                                {
+                                  "name": "Ribeye Steak",
+                                  "price": 34.99,
+                                  "quantity": 2
+                                },
+                                {
+                                  "name": "Calamari",
+                                  "price": 12.99,
+                                  "quantity": 1
+                                },
+                                {
+                                  "name": "Bruschetta",
+                                  "price": 8.99,
+                                  "quantity": 2
+                                }
+                              ],
+                              "total": 100.95,
+                              "status": "pending",
+                              "created_at": "2025-12-01T19:23:00.964108"
+                            }
+                          },
+                          "isError": false
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1764597178.574356
+        },
+        {
+          "invocation_id": "e-621f7fb3-d215-48fb-afbe-c2d1e180b2b9",
+          "user_content": {
+            "parts": [
+              {
+                "text": "that's it for now"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "If you need anything else, please call me."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "waiter_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-5e5752cf-b0d2-4bf5-9c15-1cbfd0c1318d",
+                        "args": {
+                          "agent_name": "chef_agent"
+                        },
+                        "name": "transfer_to_agent"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "waiter_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-5e5752cf-b0d2-4bf5-9c15-1cbfd0c1318d",
+                        "name": "transfer_to_agent",
+                        "response": {
+                          "result": null
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "chef_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "I have received your order. I will update the status to ready and then transfer it to the server."
+                    },
+                    {
+                      "function_call": {
+                        "id": "adk-f5b0d09d-3fb6-402f-810f-aa7b267a41ac",
+                        "args": {
+                          "order_id": "8cac1565",
+                          "status": "ready"
+                        },
+                        "name": "update_order_status"
+                      }
+                    },
+                    {
+                      "function_call": {
+                        "id": "adk-77a425e2-e576-48cf-afbb-0e2ba6d7dd4e",
+                        "args": {
+                          "agent_name": "server_agent"
+                        },
+                        "name": "transfer_to_agent"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "chef_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-f5b0d09d-3fb6-402f-810f-aa7b267a41ac",
+                        "name": "update_order_status",
+                        "response": {
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "{\"status\":\"success\",\"order\":{\"id\":\"8cac1565\",\"customer_id\":\"fba2e88e\",\"table_id\":\"table08\",\"items\":[{\"name\":\"Ribeye Steak\",\"price\":34.99,\"quantity\":2},{\"name\":\"Calamari\",\"price\":12.99,\"quantity\":1},{\"name\":\"Bruschetta\",\"price\":8.99,\"quantity\":2}],\"total\":100.95,\"status\":\"ready\",\"created_at\":\"2025-12-01T19:23:00.964108\",\"updated_at\":\"2025-12-01T19:23:14.022169\"}}"
+                            }
+                          ],
+                          "structuredContent": {
+                            "status": "success",
+                            "order": {
+                              "id": "8cac1565",
+                              "customer_id": "fba2e88e",
+                              "table_id": "table08",
+                              "items": [
+                                {
+                                  "name": "Ribeye Steak",
+                                  "price": 34.99,
+                                  "quantity": 2
+                                },
+                                {
+                                  "name": "Calamari",
+                                  "price": 12.99,
+                                  "quantity": 1
+                                },
+                                {
+                                  "name": "Bruschetta",
+                                  "price": 8.99,
+                                  "quantity": 2
+                                }
+                              ],
+                              "total": 100.95,
+                              "status": "ready",
+                              "created_at": "2025-12-01T19:23:00.964108",
+                              "updated_at": "2025-12-01T19:23:14.022169"
+                            }
+                          },
+                          "isError": false
+                        }
+                      }
+                    },
+                    {
+                      "function_response": {
+                        "id": "adk-77a425e2-e576-48cf-afbb-0e2ba6d7dd4e",
+                        "name": "transfer_to_agent",
+                        "response": {
+                          "result": null
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "server_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "Here is your order. Hope you enjoy it!"
+                    },
+                    {
+                      "function_call": {
+                        "id": "adk-c8f14016-7bf8-4dd0-82e1-8a51b4f13f78",
+                        "args": {
+                          "agent_name": "waiter_agent"
+                        },
+                        "name": "transfer_to_agent"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "server_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-c8f14016-7bf8-4dd0-82e1-8a51b4f13f78",
+                        "name": "transfer_to_agent",
+                        "response": {
+                          "result": null
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1764597189.731003
+        },
+        {
+          "invocation_id": "e-5b4b6378-38b3-41c7-8d93-cc1b7ef692b5",
+          "user_content": {
+            "parts": [
+              {
+                "text": "sure"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "If you need anything else, please call me."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {},
+          "creation_timestamp": 1764597203.28764
+        },
+        {
+          "invocation_id": "e-acaeb528-80e6-4db2-a369-5b03adcfbf1e",
+          "user_content": {
+            "parts": [
+              {
+                "text": "I would like to have 5 Fresh Lemonade."
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Would you like anything else?"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "waiter_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-8fc368dd-b9bc-4ec4-8755-c9484a55de09",
+                        "args": {
+                          "table_id": "table08",
+                          "customer_id": "fba2e88e",
+                          "items": [
+                            {
+                              "name": "Fresh Lemonade",
+                              "quantity": 5
+                            }
+                          ]
+                        },
+                        "name": "create_order"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "waiter_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-8fc368dd-b9bc-4ec4-8755-c9484a55de09",
+                        "name": "create_order",
+                        "response": {
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "{\"status\":\"created\",\"order\":{\"id\":\"bd6aca3a\",\"customer_id\":\"fba2e88e\",\"table_id\":\"table08\",\"items\":[{\"name\":\"Fresh Lemonade\",\"price\":4.99,\"quantity\":5}],\"total\":24.95,\"status\":\"pending\",\"created_at\":\"2025-12-01T19:23:55.435509\"}}"
+                            }
+                          ],
+                          "structuredContent": {
+                            "status": "created",
+                            "order": {
+                              "id": "bd6aca3a",
+                              "customer_id": "fba2e88e",
+                              "table_id": "table08",
+                              "items": [
+                                {
+                                  "name": "Fresh Lemonade",
+                                  "price": 4.99,
+                                  "quantity": 5
+                                }
+                              ],
+                              "total": 24.95,
+                              "status": "pending",
+                              "created_at": "2025-12-01T19:23:55.435509"
+                            }
+                          },
+                          "isError": false
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1764597233.004156
+        },
+        {
+          "invocation_id": "e-187a7677-2269-4794-a4f0-a583da94e24c",
+          "user_content": {
+            "parts": [
+              {
+                "text": "that's it, and get me the bill"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Here is your bill:\n\nTotal Amount: $319.44\n\nHow would you like to pay?"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "waiter_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-5293a5e1-93d8-424c-bf68-a9848f617abb",
+                        "args": {
+                          "customer_id": "fba2e88e"
+                        },
+                        "name": "generate_bill"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "waiter_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-5293a5e1-93d8-424c-bf68-a9848f617abb",
+                        "name": "generate_bill",
+                        "response": {
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "{\"status\":\"success\",\"bill\":{\"id\":\"09c03cce\",\"customer_id\":\"fba2e88e\",\"orders\":[\"315880ac\",\"135c73f5\",\"73b6b51d\",\"fbbe15fa\",\"7868d63b\",\"77d80f7e\",\"72403063\",\"775a3624\",\"8cac1565\"],\"subtotal\":295.78,\"tax\":23.66,\"total\":319.44,\"status\":\"pending\",\"created_at\":\"2025-12-01T19:24:13.709730\"}}"
+                            }
+                          ],
+                          "structuredContent": {
+                            "status": "success",
+                            "bill": {
+                              "id": "09c03cce",
+                              "customer_id": "fba2e88e",
+                              "orders": [
+                                "315880ac",
+                                "135c73f5",
+                                "73b6b51d",
+                                "fbbe15fa",
+                                "7868d63b",
+                                "77d80f7e",
+                                "72403063",
+                                "775a3624",
+                                "8cac1565"
+                              ],
+                              "subtotal": 295.78,
+                              "tax": 23.66,
+                              "total": 319.44,
+                              "status": "pending",
+                              "created_at": "2025-12-01T19:24:13.709730"
+                            }
+                          },
+                          "isError": false
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1764597251.567175
+        },
+        {
+          "invocation_id": "e-e7b8159e-3650-4e20-9e5e-6dd445b4c983",
+          "user_content": {
+            "parts": [
+              {
+                "text": "cash"
+              }
+            ],
+            "role": "user"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "waiter_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-57db08ae-a3a1-456f-b696-01ff998be496",
+                        "args": {
+                          "bill_id": "09c03cce",
+                          "payment_method": "cash"
+                        },
+                        "name": "process_payment"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "waiter_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-57db08ae-a3a1-456f-b696-01ff998be496",
+                        "name": "process_payment",
+                        "response": {
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "{\"status\":\"success\",\"message\":\"Payment processed successfully\",\"bill\":{\"id\":\"09c03cce\",\"customer_id\":\"fba2e88e\",\"orders\":[\"315880ac\",\"135c73f5\",\"73b6b51d\",\"fbbe15fa\",\"7868d63b\",\"77d80f7e\",\"72403063\",\"775a3624\",\"8cac1565\"],\"subtotal\":295.78,\"tax\":23.66,\"total\":319.44,\"status\":\"paid\",\"created_at\":\"2025-12-01T19:24:13.709730\",\"payment_method\":\"cash\",\"paid_at\":\"2025-12-01T19:24:23.191099\"}}"
+                            }
+                          ],
+                          "structuredContent": {
+                            "status": "success",
+                            "message": "Payment processed successfully",
+                            "bill": {
+                              "id": "09c03cce",
+                              "customer_id": "fba2e88e",
+                              "orders": [
+                                "315880ac",
+                                "135c73f5",
+                                "73b6b51d",
+                                "fbbe15fa",
+                                "7868d63b",
+                                "77d80f7e",
+                                "72403063",
+                                "775a3624",
+                                "8cac1565"
+                              ],
+                              "subtotal": 295.78,
+                              "tax": 23.66,
+                              "total": 319.44,
+                              "status": "paid",
+                              "created_at": "2025-12-01T19:24:13.709730",
+                              "payment_method": "cash",
+                              "paid_at": "2025-12-01T19:24:23.191099"
+                            }
+                          },
+                          "isError": false
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "waiter_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "Thank you for dining with us! Please visit again."
+                    },
+                    {
+                      "function_call": {
+                        "id": "adk-5e3e54cb-5fed-4272-ac3b-5124ab1cfe5f",
+                        "args": {
+                          "capacity": 10
+                        },
+                        "name": "release_table"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "waiter_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-5e3e54cb-5fed-4272-ac3b-5124ab1cfe5f",
+                        "name": "release_table",
+                        "response": {
+                          "content": [
+                            {
+                              "type": "text",
+                              "text": "{\"status\":\"success\",\"table\":{\"id\":\"table08\",\"number\":8,\"capacity\":10,\"location\":\"private\",\"status\":\"available\",\"customer_id\":null,\"seated_at\":null}}"
+                            }
+                          ],
+                          "structuredContent": {
+                            "status": "success",
+                            "table": {
+                              "id": "table08",
+                              "number": 8,
+                              "capacity": 10,
+                              "location": "private",
+                              "status": "available",
+                              "customer_id": null,
+                              "seated_at": null
+                            }
+                          },
+                          "isError": false
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1764597259.729288
+        }
+      ],
+      "session_input": {
+        "app_name": "restaurant_agent",
+        "user_id": "user"
+      },
+      "creation_timestamp": 1764597302.61877
+    }
+  ],
+  "creation_timestamp": 1764597287.729347
+}

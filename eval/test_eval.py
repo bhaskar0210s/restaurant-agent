@@ -1,0 +1,47 @@
+# Copyright 2025 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+"""Basic evaluation for Restaurant Agent"""
+
+import os
+import pathlib
+
+import dotenv
+import pytest
+from google.adk.evaluation.agent_evaluator import AgentEvaluator
+
+pytest_plugins = ("pytest_asyncio",)
+
+
+@pytest.fixture(scope="session", autouse=True)
+def load_env():
+    """Load environment variables from .env file."""
+    dotenv.load_dotenv()
+
+
+@pytest.mark.asyncio
+async def test_happy_flow():
+    """Test the restaurant agent's happy flow scenario."""
+    eval_file = pathlib.Path(__file__).parent / "HappyFlow.evalset.json"
+    
+    # Use more lenient thresholds that are realistic for LLM responses
+    # Tool trajectory: 0.3 allows for some variation in tool call order/format
+    # Response match: 0.3 allows for semantic similarity without exact text match
+    # The test_config.json file will be automatically found and used
+    await AgentEvaluator.evaluate(
+        "restaurant_agent",
+        str(eval_file),
+        num_runs=1,
+    )
+
